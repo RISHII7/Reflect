@@ -1,4 +1,7 @@
 import { Inter } from "next/font/google";
+
+import Header from "@/components/header";
+
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] })
@@ -18,7 +21,7 @@ export default function RootLayout({ children }) {
         className={`${inter.className}`}
       >
         <div className="bg-[url('/bg.jpg')] opacity-50 fixed -z-10 inset-0" />
-        {/* header */}
+        <Header />
         <main className="min-h-screen">{children}</main>
         <footer className="bg-orange-300 py-12 bg-opacity-10">
           <div className="mx-auto px-4 text-center text-gray-900">
